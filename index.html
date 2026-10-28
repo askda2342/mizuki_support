@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f1f0ed">
+  <title>Departamento de Soporte Técnico de Mizuki</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="support-page">
+    <header class="support-header">
+      <p class="eyebrow">DEPARTAMENTO DE SOPORTE TÉCNICO DE MIZUKI</p>
+
+      <div class="status-line" aria-label="Estado del sistema">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>OPERATIVO 24/7</span>
+      </div>
+    </header>
+
+    <section class="main-console" aria-label="Consola de emergencia">
+      <button id="emergencyButton" class="emergency-button" type="button">
+        <span class="emergency-button__ring" aria-hidden="true"></span>
+        <span class="emergency-button__inner">
+          <span class="emergency-kicker">EMERGENCIA</span>
+          <span class="emergency-copy">TOCAR EN CASO<br>DE EMERGENCIA</span>
+        </span>
+      </button>
+
+      <button id="friedButton" class="fried-button" type="button">
+        mi cerebro está frito
+      </button>
+    </section>
+
+    <footer class="support-footer">
+      <span>soporte emocional no certificado</span>
+      <span aria-hidden="true">·</span>
+      <span>uso ilimitado</span>
+    </footer>
+  </main>
+
+  <div id="resultModal" class="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+
+    <section class="result-card" role="dialog" aria-modal="true" aria-labelledby="resultLabel">
+      <button class="result-card__close" type="button" data-close aria-label="Cerrar">×</button>
+
+      <div class="result-card__content">
+        <div class="result-card__meta">
+          <span id="resultLabel">PROTOCOLO DE EMERGENCIA</span>
+          <span id="resultCounter">01</span>
+        </div>
+
+        <div class="result-card__body">
+          <p id="resultText" class="result-text"></p>
+
+          <a id="resultLink"
+             class="result-link"
+             href="#"
+             target="_blank"
+             rel="noopener noreferrer"
+             hidden>
+            abrir enlace ↗
+          </a>
+        </div>
+
+        <button id="anotherButton" class="another-button" type="button">
+          otro, por favor
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
